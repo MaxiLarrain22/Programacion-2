@@ -1,4 +1,5 @@
-/* Desarrolla una aplicación utilizando TypeScript que genere contraseñas seguras. 
+"use strict";
+/* Desarrolla una aplicación utilizando TypeScript que genere contraseñas seguras.
 La aplicación debe seguir las siguientes pautas:
 
 La aplicación debe generar una contraseña aleatoria de una longitud específica.
@@ -8,18 +9,16 @@ Ten en cuenta las siguientes consideraciones:
 
 Puedes utilizar cualquier librería de generación de contraseñas aleatorias que esté disponible para TypeScript.
 Asegúrate de que la aplicación sea fácil de usar y proporcione instrucciones claras al usuario.
-Puedes incluir características adicionales en tu aplicación, 
+Puedes incluir características adicionales en tu aplicación,
 como permitir al usuario especificar el conjunto de caracteres permitidos en la contraseña. */
-
-import * as generatePassword from "generate-password";
-
-const passwordOptions ={
+Object.defineProperty(exports, "__esModule", { value: true });
+var generatePassword = require("generate-password");
+var passwordOptions = {
     length: 14,
-    number:true,
-    symbols:true,
-    uppercase:true,
-    lowercase:true,
+    number: true,
+    symbols: true,
+    uppercase: true,
+    lowercase: true,
 };
-
-const GeneradorContraseña = generatePassword.generate(passwordOptions);
+var GeneradorContraseña = generatePassword.generate(passwordOptions);
 console.log(GeneradorContraseña);
